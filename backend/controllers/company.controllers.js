@@ -79,7 +79,7 @@ export const updateCompany= async(req, res)=>{
     try {
          const { name, description , website, location}= req.body;
          const file= req.file;
-         console.log(name, description , website, location)
+        //  console.log(name, description , website, location)
          //cloudinary
          const fileUri= getDataUri(file)
          const cloudResponse= await cloudinary.uploader.upload(fileUri.content)

@@ -6,7 +6,7 @@ import cloudinary from "../utils/cloudinary.js";
 export const register = async (req, res) => {
   try {
     const { fullname, email, phoneNumber, password, role } = req.body;
-    console.log(fullname, email, phoneNumber, password, role)
+    // console.log(fullname, email, phoneNumber, password, role)
     // const file = req.file;
     // console.log(file)
     if (!fullname || !email || !phoneNumber || !password || !role) {
@@ -123,7 +123,7 @@ export const updateprofile= async (req,res)=>{
  
     try {
         const {fullname, email, phoneNumber ,bio,skills}= req.body;
-        console.log(fullname, email, phoneNumber ,bio,skills)
+        // console.log(fullname, email, phoneNumber ,bio,skills)
         const file = req.file;
         console.log(file)
         

@@ -15,7 +15,7 @@ const Applicants = () => {
             const fetchAllApplicants= async()=>{
                 try {
                      const res= await axios.get(`${APPLICATION_API_END_POINT}/${params.id}/applicants`,{withCredentials:true})
-                     console.log(res.data)
+                    //  console.log(res.data)
                      if(res.data.success){
                         dispatch(setAllapplicants(res.data.job))
                      }
@@ -29,7 +29,7 @@ const Applicants = () => {
     <div>
       <Navbar/>
       <div className='max-w-7xl mx-auto '>
-           <h1 className='font-bold text-xl my-5'>Total Applications Received-{applicants.applications.length}</h1>
+           <h1 className='font-bold text-xl my-5'>Total Applications Received-{applicants?.applications?.length}</h1>
            <ApplicantsTable/>
       </div>
     </div>

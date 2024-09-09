@@ -13,7 +13,7 @@ const JobDescription = () => {
  const params= useParams()
  const jobId=params.id
  const {singleJob}=useSelector(store=>store.job)
- console.log(singleJob)
+//  console.log(singleJob)
  const {user}=useSelector(store=>store.auth)
  const dispatch =useDispatch()
 
@@ -23,7 +23,7 @@ const JobDescription = () => {
  const applyJobHandler= async()=>{
    try {
     const res=await axios.get(`${APPLICATION_API_END_POINT}/apply/${jobId}`,{withCredentials:true})
-    console.log(res.data)
+    // console.log(res.data)
     if(res.data.success){
       setIsApplied(true)//update the local state
       const updatedSingleJob= {...singleJob, applications:[...singleJob.applications,{applicant:user?._id}]}
